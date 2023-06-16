@@ -32,35 +32,35 @@ function SideBar() {
             <div className="sidebar-heading">Actions</div>
 
             {/* <!-- Nav Item - Pages --> */}
-            <li className="nav-item">
-                <Link className="nav-link collapsed" to="/genres">
+            {/* <li className="nav-item">
+                <Link className="nav-link collapsed" to="/usuarios">
                     <i className="fas fa-fw fa-users"></i>
                     <span>Usuarios</span>
                 </Link>
-            </li>
+            </li> */}
 
             {/* <!-- Nav Item - Charts --> */}
             <li className="nav-item">
-                <Link className="nav-link" to="/movies">
+                <Link className="nav-link" to="/productos">
                     <i className="fas fa-fw fa-chart-area"></i>
                     <span>Productos</span>
                 </Link>
             </li>
 
             {/* <!-- Nav Item - Tables --> */}
-            <li className="nav-item">
+            {/* <li className="nav-item">
                 <Link className="nav-link" to="/last-movie">
                     <i className="fas fa-fw fa-table"></i>
                     <span>Ultimo producto agregado</span>
                 </Link>
-            </li>
+            </li> */}
 
-            <li className="nav-item">
+            {/* <li className="nav-item">
                 <Link className="nav-link" to="/search">
                     <i className="fas fa-search"></i>
                     <span>Buscar producto</span>
                 </Link>
-            </li>
+            </li> */}
 
             {/* <!-- Divider --> */}
             <hr className="sidebar-divider d-none d-md-block" />

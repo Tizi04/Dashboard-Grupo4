@@ -4,7 +4,7 @@ const cards = [
     {
         title: 'Productos',
         color: 'primary',
-        quantity: 18,
+        quantity: 10,
         icon: 'fa-laptop'
     },
     {

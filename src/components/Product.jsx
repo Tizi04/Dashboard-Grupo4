@@ -3,18 +3,18 @@
 import React from 'react'
 
 //Importar nuestro componente
-import MovieList from './MovieList'
+import ProductList from './ProductList'
 
-class Movie extends React.Component {
+class Product extends React.Component {
     state = {
-        movies: []
+        product: []
     }
 
     componentDidMount() {
-        fetch('http://localhost:3001/api/movies')
+        fetch('http://localhost:3030/api/products')
             .then(res => res.json())
             .then(data => {
-                this.setState({ movies: data.data })
+                this.setState({ product: data.products })
             })
             .catch(err => {
                 console.log(err)
@@ -25,26 +25,25 @@ class Movie extends React.Component {
         return (
             <>
                 {/*<!-- MOVIES LIST -->*/}
-                <h1 className="h3 mb-2 text-gray-800 ">Todos Los Productos</h1>
 
                 {/*<!-- DataTales Example -->*/}
-                <div className="card shadow mb-4">
+                <div className='card'>
                     <div className="card-body">
+                        <h1 className="card-title">Todos Los Productos</h1>
                         <div className="table-responsive">
                             <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
                                 <thead>
                                     <tr>
                                         <th>Id</th>
                                         <th>Nombre</th>
-                                        <th>Precio</th>
-                                        {/* <th>Premios</th> */}
-                                        {/* <th>Duración</th> */}
+                                        <th>Categoria</th>
+                                        <th>Descripcion</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {
-                                        this.state.movies.map((movie, index) => {
-                                            return <MovieList  {...movie} key={index} />
+                                        this.state.product.map((product, index) => {
+                                            return <ProductList  {...product} key={index} />
                                         })
                                     }
                                 </tbody>
@@ -57,4 +56,4 @@ class Movie extends React.Component {
     }
 }
 
-export default Movie
+export default Product
