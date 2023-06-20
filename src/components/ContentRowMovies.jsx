@@ -10,7 +10,7 @@ const cards = [
     {
         title: 'Usuarios',
         color: 'success',
-        quantity: 5,
+        quantity: 6,
         icon: 'fa-users'
     },
 
